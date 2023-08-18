@@ -1,0 +1,22 @@
+@import '../../../variables';
+
+.product-card {
+  max-width: 300px;
+  font-family: $montserrat;
+  font-size: 0.9rem;
+
+  img {
+    border-radius: 10px;
+  }
+
+  mat-card-content {
+    margin: 10px 0px;
+    p {
+      padding: 10px 0;
+    }
+  }
+
+  mat-card-actions {
+    justify-content: end;
+  }
+}
