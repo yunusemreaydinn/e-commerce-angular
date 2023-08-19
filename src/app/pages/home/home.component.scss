@@ -12,17 +12,21 @@
 
 .section {
     width: 100%;
+
     h1 {
         text-align: center;
         padding-bottom: 20px;
         font-weight: bold;
         text-transform: uppercase;
     }
+
     .items {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-rows: repeat(auto-fit, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+
         .items-card {
-            flex-grow: 1;
             display: flex;
             justify-content: center;
         }

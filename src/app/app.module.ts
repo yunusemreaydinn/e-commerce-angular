@@ -24,6 +24,7 @@ import { EmailSectionComponent } from './components/email-section/email-section.
 import { MatMenuModule } from '@angular/material/menu';
 import { MenuClothesComponent } from './components/menu-clothes/menu-clothes.component';
 import { MenuTechnologyComponent } from './components/menu-technology/menu-technology.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { MenuTechnologyComponent } from './components/menu-technology/menu-techn
     MatCardModule,
     MatListModule,
     MatMenuModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

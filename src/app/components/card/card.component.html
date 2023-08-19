@@ -1,13 +1,10 @@
 <mat-card class="product-card">
-  <img
-    mat-card-image
-    src="../../../assets/images/product.jpg"
-    alt="Photo of a Shiba Inu"
-  />
+  <img mat-card-image [src]=thumbnail alt="Photo of a Shiba Inu" />
   <mat-card-content>
-    <p>This is a pretty good t-shirt.</p>
+    <p>{{title}}</p>
   </mat-card-content>
   <mat-card-actions>
+    <div>${{price}}</div>
     <mat-icon>add_shopping_cart</mat-icon>
   </mat-card-actions>
 </mat-card>

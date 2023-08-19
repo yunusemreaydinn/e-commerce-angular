@@ -3,34 +3,40 @@
 .footer {
     font-family: $montserrat;
     height: 200px;
-    width: 1520px;
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
+    justify-content: center;
+    margin: 30px 0;
+    padding-bottom: 30px;
+    gap: 100px;
+
     .about {
         display: flex;
         flex-direction: column;
         gap: 30px;
         width: 300px;
+
         .big-title {
             font-size: 2rem;
         }
     }
+
     .footer-section {
         width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
         ul {
             list-style-type: none;
             padding: 0;
+
             li {
                 margin: 15px 0;
             }
         }
     }
+
     .title {
         letter-spacing: 2px;
     }
-
 }
