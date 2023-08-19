@@ -10,7 +10,7 @@
     gap: 50px;
 }
 
-.new-arrivals {
+.section {
     width: 100%;
     h1 {
         text-align: center;
@@ -20,6 +20,7 @@
     }
     .items {
         display: flex;
+        flex-wrap: wrap;
         .items-card {
             flex-grow: 1;
             display: flex;
@@ -30,7 +31,6 @@
 
 hr {
     width: 1520px;
-    padding: 20px 0;
 }
 
 .raleway {

@@ -18,7 +18,12 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
+import { CommentsComponent } from './components/comments/comments.component';
+import { EmailSectionComponent } from './components/email-section/email-section.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MenuClothesComponent } from './components/menu-clothes/menu-clothes.component';
+import { MenuTechnologyComponent } from './components/menu-technology/menu-technology.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,10 @@ import {MatListModule} from '@angular/material/list';
     HeaderComponent,
     FooterComponent,
     CarouselComponent,
+    CommentsComponent,
+    EmailSectionComponent,
+    MenuClothesComponent,
+    MenuTechnologyComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +52,7 @@ import {MatListModule} from '@angular/material/list';
     MatButtonModule,
     MatCardModule,
     MatListModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

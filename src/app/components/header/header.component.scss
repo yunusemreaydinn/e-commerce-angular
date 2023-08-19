@@ -4,40 +4,24 @@
   display: flex;
   justify-content: center;
   .navbar {
-    height: 100px;
+    height: 150px;
     width: 1520px;
     display: flex;
-    align-items: center;
     .logo {
       font-family: $raleway;
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 2rem;
       text-transform: uppercase;
+      flex: 1;
     }
-
-    #menu {
+    .menu {
+      flex: 3;
       display: flex;
-      list-style-type: none;
-      margin: 0;
-      gap: 2rem;
-      align-items: center;
-      a {
-        text-decoration: none;
-      }
-      .btn {
-        font-size: 0.8rem;
-        font-weight: 600;
-        font-family: $raleway;
-        &:hover {
-          color: $secondary;
-        }
-        &:active {
-          border-color: white;
-        }
-      }
-      mat-icon {
-        cursor: pointer;
-      }
+      gap: 30px;
+    }
+    .icons{
+      display: flex;
+      gap: 30px;
     }
   }
 }
