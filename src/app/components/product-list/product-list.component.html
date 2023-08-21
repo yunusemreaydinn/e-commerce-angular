@@ -1,6 +1,8 @@
-<div class="product-list">
-    <div *ngFor="let product of products.products" class="card">
-        <app-card [thumbnail]="product.thumbnail" [title]="product.title" [price]="product.price"></app-card>
+<div>
+  <div *ngIf="products" class="product-list">
+    <div *ngFor="let product of products" class="card">
+      <app-card [item]="product"></app-card>
     </div>
+  </div>
 </div>
-<hr>
+<hr />

@@ -1,22 +1,26 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent {
+  products: any;
 
-  products:any;
+  constructor(
+    private _service: ProductsService,
+    private _route: ActivatedRoute
+  ) {}
 
-  constructor(private _service:ProductsService ){}
-
-  ngOnInit(){
-    this._service.getAllProducts().subscribe(data => {
-      this.products=data;
-      console.log(this.products);
-    })
+  ngOnInit() {
+    this._route.params.subscribe((params) => {
+      const category = params['category'];
+      this._service.getProductByCategory(category).subscribe((data) => {
+        this.products = data;
+      });
+    });
   }
-
 }

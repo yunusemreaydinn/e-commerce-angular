@@ -1,12 +1,12 @@
 <div class="header">
   <nav class="navbar">
-    <div class="logo">Shopping app</div>
+    <div class="logo" routerLink="/">Shopping App</div>
     <div class="menu">
       <app-menu-clothes></app-menu-clothes>
       <app-menu-technology></app-menu-technology>
     </div>
     <div class="icons">
-      <mat-icon>shopping_cart</mat-icon>
+      <mat-icon routerLink="/cart" matBadge={{itemCount}} matBadgeColor="warn">shopping_cart</mat-icon>
       <mat-icon>person</mat-icon>
     </div>
   </nav>

@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-card',
@@ -7,8 +8,12 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
 
-  @Input() thumbnail = "";
-  @Input() title = "";
-  @Input() price = "";
+  constructor(private _service:CartService){}
+
+  @Input() item:any;
+
+  addToCart(product:any){
+    this._service.addProduct(product);
+  }
 
 }

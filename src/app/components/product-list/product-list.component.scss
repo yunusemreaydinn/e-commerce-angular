@@ -1,10 +1,12 @@
 .product-list {
     width: 80%;
+    min-height: 80vh;
     margin: 0 auto;
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    margin-top: 50px;
 
     .card {
         border: 0;

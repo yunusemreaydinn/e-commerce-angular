@@ -22,8 +22,8 @@ import { MatListModule } from '@angular/material/list';
 import { CommentsComponent } from './components/comments/comments.component';
 import { EmailSectionComponent } from './components/email-section/email-section.component';
 import { MatMenuModule } from '@angular/material/menu';
-import { MenuClothesComponent } from './components/menu-clothes/menu-clothes.component';
-import { MenuTechnologyComponent } from './components/menu-technology/menu-technology.component';
+import { MenuClothesComponent } from './components/menu/menu-clothes/menu-clothes.component';
+import { MenuTechnologyComponent } from './components/menu/menu-technology/menu-technology.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

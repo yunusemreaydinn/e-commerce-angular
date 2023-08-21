@@ -1,0 +1,15 @@
+<div>
+  <button mat-button [matMenuTriggerFor]="technology">TECHNOLOGY</button>
+
+  <mat-menu #technology="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="computer">
+      <span class="menu-item" routerLink="/products/electronics">computer</span>
+    </button>
+    <button mat-menu-item><span class="menu-item">telephone</span></button>
+  </mat-menu>
+
+  <mat-menu #computer="matMenu">
+    <button mat-menu-item><span class="menu-item" routerLink="/products/electronics">desktop</span></button>
+    <button mat-menu-item><span class="menu-item" routerLink="/products/electronics">notebook</span></button>
+  </mat-menu>
+</div>

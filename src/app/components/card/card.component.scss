@@ -1,26 +1,39 @@
-@import '../../../variables';
+@import "../../../variables";
 
 .product-card {
-  width: 400px;
+  width: 250px;
+  height: 350px;
   font-family: $montserrat;
   font-size: 0.9rem;
 
   img {
-    border-radius: 10px;
-    height: 240px;
+    height: 200px;
+    object-fit: contain;
+    margin: 10px;
   }
 
   mat-card-content {
+    height: 100%;
     margin: 10px 10px;
     font-weight: bold;
     p {
       padding: 10px 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 
   mat-card-actions {
     justify-content: space-between;
-    margin: 0 20px;
+    margin: 20px 20px;
     font-weight: 500;
+  }
+
+  mat-icon {
+    cursor: pointer;
+    &:hover {
+      color: green !important;
+    }
   }
 }

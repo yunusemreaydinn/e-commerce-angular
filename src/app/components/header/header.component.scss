@@ -13,15 +13,19 @@
       font-size: 2rem;
       text-transform: uppercase;
       flex: 1;
+      cursor: pointer;
     }
     .menu {
       flex: 3;
       display: flex;
       gap: 30px;
     }
-    .icons{
+    .icons {
       display: flex;
       gap: 30px;
+    }
+    mat-icon {
+      cursor: pointer;
     }
   }
 }

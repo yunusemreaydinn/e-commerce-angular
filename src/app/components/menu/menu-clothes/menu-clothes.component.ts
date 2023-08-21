@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-clothes',
@@ -6,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-clothes.component.scss']
 })
 export class MenuClothesComponent {
-
 }
