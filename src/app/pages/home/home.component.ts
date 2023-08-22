@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommentService } from 'src/app/services/comment.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-home',
@@ -6,57 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  arrivals = [
-    {
-      title: 'Fjallraven - Foldsack No. 1 Backpack',
-      price: '109.05',
-      category: "men's clothing",
-      image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
-    },
-    {
-      title: 'Mens Casual Premium Slim Fit T-Shirts',
-      price: '22.3',
-      category: "men's clothing",
-      image:
-      "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"},
-    {
-      title: 'Mens Cotton Jacket',
-      price: '55.99',
-      category: "men's clothing",
-      image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
-    },
-    {
-      title: 'Mens Cotton Jacket',
-      price: '55.99',
-      category: "men's clothing",
-      image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
-    },
-  ];
+  constructor(
+    private _service: ProductsService,
+    private _commentService: CommentService
+  ) {}
 
-  topRatings = [
-    {
-      title: 'Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5',
-      price: '15.99',
-      category: "men's clothing",
-      image: 'https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg',
-    },
-    {
-      title: "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-      price: '109.05',
-      category: "men's clothing",
-      image: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
-    },
-    {
-      title: 'Solid Gold Petite Micropave',
-      price: '695',
-      category: 'jewelery',
-      image: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
-    },
-    {
-      title: 'Solid Gold Petite Micropave',
-      price: '695',
-      category: 'jewelery',
-      image: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
-    },
-  ];
+  arrivals = this._service.arrivals;
+
+  topRatings = this._service.topRatings;
+
+  comments: any;
+
+  ngOnInit() {
+    this._commentService.getComments().subscribe((data) => {
+      this.comments = data;
+      this.comments = this.comments.comments;
+    });
+  }
 }

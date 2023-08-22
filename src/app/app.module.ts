@@ -25,6 +25,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MenuClothesComponent } from './components/menu/menu-clothes/menu-clothes.component';
 import { MenuTechnologyComponent } from './components/menu/menu-technology/menu-technology.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DecimalPipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatMenuModule,
     HttpClientModule,
+    DecimalPipe,
+    FormsModule,
+    NgbPaginationModule,
+    NgbTypeaheadModule
   ],
   providers: [],
   bootstrap: [AppComponent],

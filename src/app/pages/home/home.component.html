@@ -17,10 +17,9 @@
   <div class="section">
     <h1 class="raleway">Comments</h1>
     <div class="comments">
-      <app-comments class="items-card"></app-comments>
-      <app-comments class="items-card"></app-comments>
-      <app-comments class="items-card"></app-comments>
-      <app-comments class="items-card"></app-comments>
+      <div *ngFor="let comment of comments" class="comment">
+        <app-comments [comment]="comment"></app-comments>
+      </div>
     </div>
   </div>
   <app-email-section></app-email-section>
